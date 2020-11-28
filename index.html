@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+	     <link rel="stylesheet" type="text/css" href="css/banner.css"/>
+		 <link rel="stylesheet" type="text/css" href="css/hbanner.css"/>
+	</head>	
+	<body>
+		<!--
+		0、分析页面结构
+		 1、先写html结构
+		 2、在写样式
+		 注意：分析页面是否包含移动端，如包含移动端一定要加上mate viewport
+		  -->
+		  <!-- .nav>a.*10 -->
+		  <div class="nav">
+		  	<a href="" class="loga"></a>
+		  	<a href="" class="text">MAC</a>
+		  	<a href="" class="text">IPAD</a>
+		  	<a href="" class="text">IPHONE</a>
+		  	<a href="" class="text">WATVH</a>
+		  	<a href="" class="text">TV</a>
+		  	<a href="" class="text">MUSIC</a>
+		  	<a href="" class="text">SUPPORT</a>
+		  	<a href="" class="search"></a>
+		  	<a href="" class="buy"></a>
+	<input hidden="hidden" type="checkbox" name="choose" id="choose" value="" />
+	<label for="choose" class="toggleBtn">
+		<span class="line"></span>
+		<span class="line"></span>
+	</label>
+	<!-- 快键：div.navpage>.navMain>(.serchInput+.navList>(a.navText)*7) -->
+		<div class="navpage">
+			<div class="navMain">
+				<div class="searchInput">
+					<div class="icon"></div>
+					<input type="text" placeholder="search apple.com" />
+				</div>
+				<hr />
+				<div class="navList">
+					<a href="" class="navText">MAC</a>
+					<a href="" class="navText">IPAD</a>
+					<a href="" class="navText">IPHONE</a>
+					<a href="" class="navText">WATCH</a>
+					<a href="" class="navText">TV</a>
+					<a href="" class="navText">MUSIC</a>
+					<a href="" class="navText">SUPORT</a>
+				</div>
+			</div>
+		</div>								
+		  </div>	
+		  <!--  .banner>(h1+h2+p+(.link>(a*2))) -->
+		 <div class="banner">
+		 	<h2>iPhone 12 Pro</h2>
+		 	<h3>It's a leap year.</h3>
+		 	<p>From $41.62/mo. or $999 before trade‑in.</p>
+			<p>Buy directly from Apple with special carrier offers.</p>
+		 	<div class="link"><a href="">Learn more</a>  <span>></span><a href="">Buy</a><span>></span></div>
+		 </div>			
+			<div class="hbanner">
+				<div class="banner">
+					<h2>iPhone 12 Pro</h2>
+					
+					<div class="link"><a href="">Learn more</a>  <span>></span><a href="">Buy</a><span>></span></div>
+				</div>				
+				<div class="banner">
+					
+					<h2>iPhone 12 Pro</h2>
+					<h3>It's a leap year.</h3>
+					<div class="link"><a href="">Learn more</a>  <span>></span><a href="">Buy</a><span>></span></div>
+				</div>			
+				</div>								  
+	</body>
+</html>
+ 

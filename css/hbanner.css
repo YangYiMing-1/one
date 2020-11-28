@@ -1,0 +1,71 @@
+.hbanner{
+	display: flex;
+	
+}
+.hbanner .banner{
+	/* width: 50px; */
+	height: 534px;
+	flex: 1;
+	background-color: #fafafa;
+}
+.hbanner .banner:nth-child(1) h2{
+	color: #1d1d1f;
+}
+.hbanner h2{
+	    font-size: 32px;
+	    line-height: 1.125;
+	    font-weight: 600;
+	    letter-spacing: .002em;
+	    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+		/* color: #1d1d1f; */
+}
+.hbanner .banner .link a{
+	font-size: 19px;
+	    line-height: 1.21053;
+	    font-weight: 400;
+	    letter-spacing: .012em;
+	    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+	    color: #06c;
+	    text-decoration: none;
+}
+.hbanner .banner:nth-child(1){
+	margin: 10px 5px 10px 10px;
+	background-image: url(../img/hbanner1.jpg);
+	background-size: auto 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.hbanner .banner:nth-child(2){
+	margin: 10px 10px 10px 5px;
+	background-image: url(../img/hbanner2.jpg);
+	background-size: auto 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+/*媒体查询，设定不同屏幕下banner和hbanner的样式*/
+/*boxsizing盒子模型*/
+@media only screen and (max-width:1100px ) {
+	.banner{
+		height:595px;
+	}
+}
+@media only screen and (max-width:740px ) {
+	.banner{
+		height:445px;
+		background-size: 80%;
+	}
+	.hbanner {
+		display: block;
+	}
+	.hbanner .banner{
+		width: 100%;
+	}
+	.hbanner{
+		height: 1020px;
+		flex-direction: column;
+	}
+	.hbanner .banner:nth-child(1),.hbanner .banner:nth-child(2){
+		width: calc(100% - 20px);
+		margin: 10px;
+	}
+	}

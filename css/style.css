@@ -1,0 +1,222 @@
+/* 
+ 初始化样式
+ 符号*：代表所有样式
+ */
+*{
+	/* 所有四个外边距都为0 */
+    margin: 0;
+	/* 所有四个内边距都为0 */
+	padding: 0;
+	
+}
+/* 设置导航样式 */
+.nav{
+	width: 100%;
+	height: 44px;
+	background: rgba(0,0,0,0.8);
+	/* 
+	 r:红色
+	 g：绿色
+	 b：蓝色
+	 a：透明度
+	 */
+	/* 设置弹性布局 */
+	display: flex;
+	/* justify-content 用于设置或检索弹性盒子元素在主轴（横轴）方向上的对齐方式。 */
+	justify-content: center;
+	/* align-items 属性定义flex子项在flex容器的当前行的侧轴（纵轴）方向上的对齐方式。 */
+	align-items: center;
+	}
+	.nav a{
+		color: #fff;
+		/* 设置添加文本的修饰，如下划线这些 */
+		text-decoration: none;
+		width: 102px;
+		/* 设置文本的水平对齐 */
+		text-align: center;
+	}
+	.nav .loga{
+		height: 44px;
+		 background-image: url(../img/loga.svg);
+		/* 设置背景图片不重复 */
+		background-repeat: no-repeat;
+	   	/* 设置背景图片的位置 */
+	   background-position: center;
+		
+	}
+
+		.nav .search{
+			height: 44px;
+		   background-image: url(../img/search.svg);
+		   /* 设置背景图片不重复 */
+		   background-repeat: no-repeat;
+		   	/* 设置背景图片的位置 */
+		   background-position: center;
+		       /* background-position: 10px 0; */
+			
+	}
+	.nav .buy{
+		height: 44px;
+		background-image: url(../img/buy.svg);
+		/* 设置背景图片不重复 */
+		background-repeat: no-repeat;
+	    /* 设置背景图片的位置 */
+	    background-position: center;
+	        
+	   }
+	   /* 设置转换按钮 */
+	  .toggleBtn{
+	  	height: 44px;
+	  	/* display: flex; */
+		/* 设置按钮隐藏 */
+	  	display: none;
+		/* 设置灵活项目的方向 */
+	  	flex-direction: column;
+	  	justify-content: center;
+	  	align-items: center;
+		position: relative;
+	  }
+	
+	 .toggleBtn .line{
+	  	height: 1px;
+	  	width: 18px;
+		/* margin: 4px; */
+	  	background-color:#fff;
+		/* display: none; */
+		transform: all 0.5s;
+	    transform-origin: left center; 
+	  
+	  }
+        .toggleBtn .line:nth-child(1){
+			position: absolute;
+			left: calc(50% - 9px);
+			top: 14px;
+		}	  
+		.toggleBtn .line:nth-child(2){
+			position: absolute;
+			left: calc(50% - 9px);
+			top: 26px;
+		}	  
+		.navpage{
+			display: flex;
+			width: 100%;
+			height: 0vh;
+			transition: all 0.8s;
+			overflow: hidden;
+			position: fixed;
+			left: 0;
+			top: 0;
+			background-color: #000;
+			}
+		.navpage .navMain{
+			width: 100%;
+			}
+		/*设定屏幕小于768像素时的样式  */
+     @media only screen and (max-width:768px) {
+		 .toggleBtn{
+			 display: flex;
+			 z-index: 100;
+			 position: relative;
+		 }
+		 .nav .loga{
+		z-index: 100;
+		position: relative;
+		 }
+    .toggleBtn .line{
+		display: block;
+	}
+	.nav .text,.nav .search{
+		display: none;
+	}
+	.nav{
+		justify-content: space-between;
+	}
+   .nav a,.nav label{
+		width: 50px;
+	}
+	.nav .toggleBtn{
+		order: 1;
+		
+	}
+	.nav .loga{
+		order: 2;
+		
+	}
+	.nav .buy{
+		order: 3;
+	}
+	
+	#choose:checked~.toggleBtn .line:nth-child(1){
+		transform: rotate(45deg);
+	}
+	#choose:checked~.toggleBtn .line:nth-child(2){
+		transform: rotate(-45deg);	
+	}
+	/* 设定复选框为选中状态时，导航页面显示 */
+	#choose:checked~.navpage{
+		display: flex;
+		/* 
+		 vw:viewport width:100vw==100%viewport width
+		 vh:viewport height:100vh==100%viewport height
+		 */
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		left: 0;
+		top: 0;
+		background-color: #000;
+		color: #FFF;
+		flex-direction: column;
+		padding-top: 54px;
+	}
+	.searchInput{
+		margin: 0 28px 20px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		height: 36px;
+		border-radius: 4px;
+		color: #ccc;
+		background-color: rgba(45,45,45,0.98);
+	}
+	.searchInput .icon{
+		width: 32px;
+		height: 36px;
+		background-image: url(../img/search.svg);
+		background-repeat: no-repeat;
+        background-position: center;
+		/* 注意：当设定背景图片时，一定要考虑图片url,重复，位置，尺寸 */
+		
+	}
+	.searchInput input{
+		flex: 1;
+		margin: 0 10px;
+		height: 100%;
+		background: transparent;
+		border: none;
+		outline: none;
+		color: #fff;
+	}
+	hr{
+		border-color: #333;
+	}
+	.navList{
+		margin: 0 38px;
+		display: flex;
+	    flex-direction: column;
+		justify-content: flex-start;
+		
+	}
+	.nav a{
+		width: 100%;
+		height: 44px;
+	    color: #fff;
+		text-align: left;
+		border-bottom: 1px solid #333;
+		line-height: 44px;
+		
+	}
+	.navList a:last-child{
+		border-bottom: none;
+	}
+}
